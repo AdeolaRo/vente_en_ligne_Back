@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/user/Desktop/Vente/vente_en_ligne/src/main</OriginalElement>
+  <nodes>
+    <node x="325.5" y="1524.5">controller.OrderController</node>
+    <node x="112.0" y="1124.5">service.UserService</node>
+    <node x="725.0" y="472.5">model.LoginRequest</node>
+    <node x="395.0" y="224.5">model.Cart</node>
+    <node x="-109.5" y="1528.5">controller.FavoriteController</node>
+    <node x="305.0" y="1237.5">service.OrderService</node>
+    <node x="641.0" y="782.0">dao.CartRepository</node>
+    <node x="574.0" y="1429.5">controller.CartController</node>
+    <node x="591.0" y="1105.5">service.CartService</node>
+    <node x="554.5" y="667.0">controller.GlobalExceptionHandler</node>
+    <node x="263.5" y="787.0">dao.OrderRepository</node>
+    <node x="691.5" y="1529.5">controller.ProductController</node>
+    <node x="139.5" y="902.0">dao.UserRepository</node>
+    <node x="751.0" y="1249.5">service.ProductService</node>
+    <node x="-99.5" y="865.5">model.Favorite</node>
+    <node x="-129.5" y="1237.5">service.FavoriteService</node>
+    <node x="795.0" y="907.0">dao.ProductRepository</node>
+    <node x="-6.0" y="787.0">dao.FavoriteRepository</node>
+    <node x="876.0" y="1442.0">com.example.vente_en_ligne.WebConfig</node>
+    <node x="162.5" y="662.0">com.example.vente_en_ligne.VenteEnLigneApplication</node>
+    <node x="132.0" y="1429.5">controller.UserController</node>
+    <node x="420.0" y="853.5">model.Order</node>
+    <node x="409.0" y="417.5">model.User</node>
+    <node x="413.0" y="-18.5">model.Product</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="service.CartService" target="dao.UserRepository" relationship="TO_ONE">
+      <point x="-141.0" y="0.0" />
+      <point x="427.5" y="1161.0" />
+      <point x="427.5" y="1218.0" />
+      <point x="369.5" y="1218.0" />
+      <point x="369.5" y="921.0" />
+      <point x="92.5" y="0.0" />
+    </edge>
+    <edge source="service.FavoriteService" target="dao.UserRepository" relationship="TO_ONE">
+      <point x="0.0" y="-43.5" />
+      <point x="12.0" y="1218.0" />
+      <point x="369.5" y="1218.0" />
+      <point x="369.5" y="921.0" />
+      <point x="92.5" y="0.0" />
+    </edge>
+    <edge source="controller.OrderController" target="service.OrderService" relationship="TO_ONE">
+      <point x="0.0" y="-36.5" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="controller.ProductController" target="service.ProductService" relationship="TO_ONE">
+      <point x="0.0" y="-31.5" />
+      <point x="-80.0" y="31.5" />
+    </edge>
+    <edge source="service.ProductService" target="dao.ProductRepository" relationship="TO_ONE">
+      <point x="0.0" y="-31.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="model.Favorite" target="model.User" relationship="TO_ONE">
+      <point x="0.0" y="-55.5" />
+      <point x="-28.0" y="835.0" />
+      <point x="-43.0" y="835.0" />
+      <point x="-43.0" y="420.5" />
+      <point x="264.0" y="420.5" />
+      <point x="264.0" y="521.0" />
+      <point x="-83.0" y="0.0" />
+    </edge>
+    <edge source="service.CartService" target="dao.CartRepository" relationship="TO_ONE">
+      <point x="0.0" y="-55.5" />
+      <point x="0.0" y="19.0" />
+    </edge>
+    <edge source="controller.CartController" target="service.CartService" relationship="TO_ONE">
+      <point x="0.0" y="-31.5" />
+      <point x="-60.0" y="55.5" />
+    </edge>
+    <edge source="controller.UserController" target="service.UserService" relationship="TO_ONE">
+      <point x="-15.0" y="-31.5" />
+      <point x="-15.0" y="36.5" />
+    </edge>
+    <edge source="service.CartService" target="dao.ProductRepository" relationship="TO_ONE">
+      <point x="0.0" y="55.5" />
+      <point x="732.0" y="1233.0" />
+      <point x="892.0" y="1233.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="service.FavoriteService" target="dao.FavoriteRepository" relationship="TO_ONE">
+      <point x="80.0" y="-43.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="service.OrderService" target="model.Order" relationship="CREATE">
+      <point x="60.0" y="-43.5" />
+      <point x="0.0" y="67.5" />
+    </edge>
+    <edge source="model.Cart" target="model.Product" relationship="TO_MANY">
+      <point x="0.0" y="-56.5" />
+      <point x="0.0" y="79.5" />
+    </edge>
+    <edge source="model.User" target="model.Cart" relationship="TO_ONE">
+      <point x="0.0" y="-103.5" />
+      <point x="0.0" y="56.5" />
+    </edge>
+    <edge source="model.Cart" target="model.User" relationship="TO_ONE">
+      <point x="-97.0" y="0.0" />
+      <point x="264.0" y="281.0" />
+      <point x="264.0" y="521.0" />
+      <point x="-83.0" y="0.0" />
+    </edge>
+    <edge source="model.User" target="model.Order" relationship="TO_MANY">
+      <point x="15.0" y="103.5" />
+      <point x="15.0" y="-67.5" />
+    </edge>
+    <edge source="service.UserService" target="dao.UserRepository" relationship="TO_ONE">
+      <point x="0.0" y="36.5" />
+      <point x="232.0" y="1218.0" />
+      <point x="369.5" y="1218.0" />
+      <point x="369.5" y="921.0" />
+      <point x="92.5" y="0.0" />
+    </edge>
+    <edge source="model.Order" target="model.User" relationship="TO_ONE">
+      <point x="0.0" y="-67.5" />
+      <point x="492.0" y="835.0" />
+      <point x="-43.0" y="835.0" />
+      <point x="-43.0" y="420.5" />
+      <point x="264.0" y="420.5" />
+      <point x="264.0" y="521.0" />
+      <point x="-83.0" y="0.0" />
+    </edge>
+    <edge source="controller.FavoriteController" target="service.FavoriteService" relationship="TO_ONE">
+      <point x="0.0" y="-32.5" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="service.OrderService" target="dao.OrderRepository" relationship="TO_ONE">
+      <point x="-29.5" y="-43.5" />
+      <point x="50.5" y="14.0" />
+    </edge>
+    <edge source="service.OrderService" target="dao.UserRepository" relationship="TO_ONE">
+      <point x="0.0" y="-43.5" />
+      <point x="432.0" y="1218.0" />
+      <point x="369.5" y="1218.0" />
+      <point x="369.5" y="921.0" />
+      <point x="92.5" y="0.0" />
+    </edge>
+    <edge source="service.FavoriteService" target="model.Favorite" relationship="CREATE">
+      <point x="-40.0" y="-43.5" />
+      <point x="0.0" y="55.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.4074526572999389" showDependencies="true" x="461.5" y="799.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+
