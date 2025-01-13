@@ -1,0 +1,144 @@
+/* Variables globales */
+:root {
+  --primary-color: #afeeaf; /* Vert football */
+  --hover-color: #228B22; /* Vert plus clair */
+  --text-light: #ffffff; /* Texte clair */
+  --text-color: #ecf0f1; /* Couleur de texte */
+  --text-dark: #2c3e50; /* Texte sombre */
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --background-image: url("/assets/images/football-background.png");
+}
+
+/* Style global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; /* Police stylée */
+  color: var(--text-light);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Assurez-vous que le corps prend toute la hauteur */
+  display: flex; /* Utilisation de flexbox pour le conteneur principal */
+  flex-direction: column; /* Orientation verticale */
+}
+
+/* Container principal avec effet glassmorphism */
+.container {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 20px auto; /* Centrer le conteneur */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  flex: 1; /* Permet au conteneur de prendre tout l'espace disponible */
+  flex-direction: column; /* Orientation verticale */
+  align-items: center; /* Centrer horizontalement */
+}
+
+/* Styles pour les sections */
+.rss-feed, .google-map {
+  width: 100%; /* Prendre toute la largeur sur la page d'accueil */
+  margin-bottom: 40px; /* Augmenter l'espacement entre les sections */
+}
+
+.offres-container {
+  width: 95%; /* Augmenter la largeur à 95% pour la page des offres */
+  margin: 0 auto; /* Centrer horizontalement */
+}
+
+.contact-container {
+  width: 95%; /* Augmenter la largeur à 95% pour la page de contact */
+  margin: 0 auto; /* Centrer horizontalement */
+  padding: 2rem; /* Ajustement du padding */
+}
+
+/* Réduction de la hauteur du formulaire */
+.form-control {
+  height: 40px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.google-map {
+  margin-bottom: 30px;
+}
+
+.rss-feed {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rss-feed h2 {
+  margin-bottom: 15px;
+}
+
+.rss-feed ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rss-feed li {
+  margin: 5px 0;
+}
+
+.rss-feed a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.rss-feed a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre */
+  color: var(--text-light); /* Texte clair */
+  text-align: center; /* Centrer le texte */
+  padding: 1.5rem 0; /* Espacement */
+  position: relative; /* Pour le positionnement */
+  bottom: 0; /* Pour le positionnement */
+  width: 100%; /* Prendre toute la largeur */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Ombre en haut */
+}
+
+/* Classe commune pour les conteneurs de page */
+.page-container {
+  width: 95%; /* Augmenter la largeur à 95% pour plus d'espace */
+  margin: 20px auto; /* Centrer horizontalement */
+  padding: 40px; /* Augmenter le padding interne */
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustements pour donner plus d'ampleur aux éléments */
+.container {
+  padding: 40px; /* Augmenter le padding du conteneur principal */
+}
+
+.page-container {
+  padding: 40px; /* Augmenter le padding pour les conteneurs de page */
+}
+
+h2 {
+  margin-bottom: 30px; /* Augmenter l'espacement inférieur des titres */
+  font-size: 2.5rem; /* Augmenter la taille de la police des titres */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Augmenter l'espacement entre les groupes de formulaire */
+}
+
+.card {
+  margin-bottom: 40px; /* Augmenter l'espacement entre les cartes d'offres */
+}
+
+.btn {
+  padding: 12px 24px; /* Augmenter le padding des boutons */
+  font-size: 1.2rem; /* Augmenter la taille de la police des boutons */
+}

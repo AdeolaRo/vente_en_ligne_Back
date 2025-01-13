@@ -1,0 +1,22 @@
+<div class="container mt-5 page-container">
+  <h2 class="page-title">Nos Offres</h2>
+  <div class="row">
+    <div *ngIf="offres.length > 0; else noData">
+      <div class="col-md-4 mb-4" *ngFor="let offre of offres">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ offre.title }}</h5>
+            <p class="card-text">{{ offre.description }}</p>
+            <a href="#" class="btn btn-secondary">Voir Détails</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Template affiché si aucune offre n'est disponible -->
+    <ng-template #noData>
+      <div class="col-12 text-center">
+        <p>Aucune offre disponible pour le moment.</p>
+      </div>
+    </ng-template>
+  </div>
+</div>
